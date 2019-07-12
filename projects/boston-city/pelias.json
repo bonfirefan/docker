@@ -32,8 +32,8 @@
       "interpolation": { "url": "http://interpolation:4300" }
     },
     "defaultParameters": {
-      "focus.point.lat": 34.05,
-      "focus.point.lon": -118.24
+      "focus.point.lat": 42.32,
+      "focus.point.lon": -71.09
     }
   },
   "imports": {
@@ -46,12 +46,12 @@
     },
     "openstreetmap": {
       "download": [
-        { "sourceURL": "https://s3.amazonaws.com/metro-extracts.nextzen.org/los-angeles_california.osm.pbf" }
+        { "sourceURL": "https://s3.amazonaws.com/metro-extracts.nextzen.org/boston_massachusetts.osm.pbf" }
       ],
       "leveldbpath": "/tmp",
       "datapath": "/data/openstreetmap",
       "import": [{
-        "filename": "los-angeles_california.osm.pbf"
+        "filename": "boston_massachusetts.osm.pbf"
       }]
     },
     "openaddresses": {
@@ -69,7 +69,7 @@
       "importVenues": false,
       "importPostalcodes": true,
       "importPlace": [
-        "102086957"
+        "85950361"
       ]
     },
     "transit": {
@@ -77,34 +77,18 @@
       "feeds": [
         {
           "layerId": "bikeshare",
-          "url": "https://bikeshare.metro.net/stations/json/",
-          "filename": "metrobikeshare.json",
-          "agencyId": "Metro-Bikeshare",
-          "agencyName": "MetroBikeshare",
-          "layerName": "bikeshare"
+          "url": "https://member.bluebikes.com/data/stations.json",
+          "filename": "stations.json",
+          "agencyId": "bluebikes-boston",
+          "agencyName": "BluebikesBoston",
+          "layerName": "Bluebikes"
         },
         {
           "layerId": "stops",
-          "url": "https://gitlab.com/LACMTA/gtfs_bus/raw/master/gtfs_bus.zip",
+          "url": "https://cdn.mbta.com/MBTA_GTFS.zip",
           "filename": "stops.txt",
-          "agencyId": "LA Metro",
-          "agencyName": "LA Metro",
-          "layerName": "Stop"
-        },
-        {
-          "layerId": "stops",
-          "url": "https://gitlab.com/LACMTA/gtfs_bus/raw/master/gtfs_rail.zip",
-          "filename": "stops.txt",
-          "agencyId": "LA Metro",
-          "agencyName": "LA Metro",
-          "layerName": "Stop"
-        },
-        {
-          "layerId": "stops",
-          "url": "http://lacitydot.com/gtfs/administrator/gtfszip/ladotgtfs.zip",
-          "filename": "stops.txt",
-          "agencyId": "LADOT",
-          "agencyName": "LADOT",
+          "agencyId": "MBTA",
+          "agencyName": "MBTA",
           "layerName": "Stop"
         }
        ]
@@ -114,7 +98,7 @@
         "tiger": {
           "datapath": "/data/tiger",
           "states": [
-            { "state_code": 6, "county_code": 37, "name": "Los Angeles County, CA" }
+            { "state_code": 25, "county_code": 25, "name": "Boston city, MA" }
           ]
         }
       }
